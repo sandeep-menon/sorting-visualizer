@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark" style="background-color: var(--bs-purple);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=".">Sorting Visualizer</a>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch">
+                <label class="form-check-label" for="darkModeSwitch" style="color: white;">Dark Mode</label>
+                <button class="btn btn-sm btn-outline-light ms-4" type="button">&lt;/ code&gt;</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-form">
+            <div class="container-fluid">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="sampleSize" class="form-label">Sample Size</label>
+                            <input type="range" class="form-range" min="1" max="5" step="0.5" id="sampleSize">
+                        </div>
+                        <div class="col-md-9 mt-auto mb-auto">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input class="form-check-input" type="radio" name="sortAlgorithm" id="bubbleSort" value="bubbleSort" checked>
+                                        <label class="form-check-label" for="bubbleSort">Bubble sort</label> 
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input class="form-check-input" type="radio" name="sortAlgorithm" id="insertionSort" value="insertionSort">
+                                        <label class="form-check-label" for="insertionSort">Insertion sort</label> 
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input class="form-check-input" type="radio" name="sortAlgorithm" id="mergeSort" value="mergeSort">
+                                        <label class="form-check-label" for="mergeSort">Merge sort</label> 
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input class="form-check-input" type="radio" name="sortAlgorithm" id="quickSort" value="quickSort">
+                                        <label class="form-check-label" for="quickSort">Quick sort</label> 
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input class="form-check-input" type="radio" name="sortAlgorithm" id="selectionSort" value="selectionSort">
+                                        <label class="form-check-label" for="selectionSort">Selection sort</label> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="visualSpeed" class="form-label">Delay</label>
+                            <input type="range" class="form-range" min="0.25" max="1.25" step="0.25" id="visualSpeed">
+                        </div>
+                        <div class="col-md-9 mt-auto mb-auto" style="text-align: center;">
+                            <button type="button" class="btn btn-outline-primary" id="visualizeBtn">Visualize!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="bars" class="bars">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

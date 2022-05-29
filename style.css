@@ -1,0 +1,12 @@
+body.dark-mode {
+  background-color: var(--bs-gray-700) !important;
+  color: var(--bs-white) !important;
+}
+.bars {
+  display: flex;
+  gap: 2px;
+}
+.bar {
+  background: var(--bs-blue);
+  flex-grow: 1;
+}
